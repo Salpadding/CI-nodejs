@@ -39,9 +39,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-        
+          key: ${{ runner.os }}-node-${{ hashFiles('package.json') }}      
         
       - name: Build image
         run: bash docker/build.sh
